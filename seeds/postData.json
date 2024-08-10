@@ -1,0 +1,12 @@
+[
+    {
+        "title": "HTML 101",
+        "content": "I learned all I need to know about HTML",
+        "post_user": 3
+    },
+    {
+        "title": "I love SQL!",
+        "content": "SQL is my favorite language for databases",
+        "post_user": 4
+    }
+]

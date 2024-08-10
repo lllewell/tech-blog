@@ -8,10 +8,10 @@ router.get('/', withAuth, async (req, res) => {
       order: [['name', 'ASC']],
     });
 
-    const post = postData.map((project) => project.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('homepage', {
-      post,
+      posts,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
