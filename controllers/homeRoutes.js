@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
-      order: [['name', 'ASC']],
+      order: [['title', 'ASC']],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
