@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
     const postData = await Post.create({
       title: req.body.title,
       content: req.body.content,
-      username: req.body.username,
+      username: req.body.post_user,
     });
     // ? if the dish is successfully created, the new response will be returned as json
     res.status(200).json(postData);

@@ -4,14 +4,12 @@ async function newFormHandler(event) {
     const content = document.querySelector('#post_content').value;
     const username = document.querySelector('#post_username').value;
 
-    // ? Send fetch request to add a new dish
     const response = await fetch(`/api/post`, {
       method: 'POST',
       body: JSON.stringify({
         title,
         content,
-        username,
-       
+        username,      
       }),
       headers: {
         'Content-Type': 'application/json',
