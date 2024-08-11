@@ -11,3 +11,32 @@
   </div>
 </div>
 {{/each}}
+<div class='add-post-container'>
+    <h2>
+      Add New Post
+    </h2>
+    <form class='new-post-form' method="post" action="/api/dish">
+      <label for='post_title'>
+        Title:
+      </label>
+      <br />
+      <textarea id='post_title' name='post_title' rows='2' cols='30'>{{title}}</textarea>
+      <br />
+      <label for='post_content'>
+        Content:
+      </label>
+      <br />
+      <textarea id='post_content' name='post_content' rows='5' cols='30'>{{content}}</textarea>
+      <br />
+      <label for='post_username'>
+         Username:
+      </label>
+      <br />
+      <textarea id='post_username' name='post_username' rows='2' cols='30'>{{username}}</textarea>
+      <br />
+    <br />
+      <button type='submit' value='Submit'>
+        Submit
+      </button>
+<!-- This is the form for adding a new dish -->
+<script src='/js/add-post.js'></script>

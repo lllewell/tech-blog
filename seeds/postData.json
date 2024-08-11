@@ -2,11 +2,13 @@
     {
         "title": "HTML 101",
         "content": "I learned all I need to know about HTML",
+        "username": "",
         "user_id": 3
     },
     {
         "title": "I love SQL!",
         "content": "SQL is my favorite language for databases",
+        "username": "",
         "user_id": 4
     }
 ]

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
@@ -28,6 +28,20 @@ router.post('/login', async (req, res) => {
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/post', async (req, res) => {
+  try {
+    const postData = await Post.create({
+      title: req.body.title,
+      content: req.body.content,
+      username: req.body.username,
+    });
+    // ? if the dish is successfully created, the new response will be returned as json
+    res.status(200).json(postData);
   } catch (err) {
     res.status(400).json(err);
   }
