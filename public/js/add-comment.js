@@ -1,15 +1,13 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#post_title').value;
-    const content = document.querySelector('#post_content').value;
-    const post_user = document.querySelector('#post_username').value;
+    const comment = document.querySelector('#add-comment').value;
+    const user = document.querySelector('#add-comment-user').value;
 
-    const response = await fetch(`/api/post/`, {
+    const response = await fetch(`/api/comment`, {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        content,
-        post_user,      
+        comment,
+        user,     
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -19,10 +17,10 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to add post');
+      alert('Failed to add comment');
     }
   }
   
   document
-    .querySelector('.new-post-form')
+    .querySelector('.new-comment-form')
     .addEventListener('submit', newFormHandler);
