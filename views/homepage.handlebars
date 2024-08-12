@@ -9,7 +9,12 @@
   <div class="col-md-6">
     <h5>Made by: {{post.post_user}}</h5>
   </div>
-  <button type="button">Add comment</button>
+<div>
+  <form class='new-comment-form' method="post" action="/api/comment"></form>
+  <textarea name="add-comment" id="add-comment" rows="2" cols="30">Comment: {{comment}}</textarea>
+  <textarea name="add-comment-user" id="add-comment-user" rows="2" cols="30">Username: {{user}}</textarea>
+  <button type="submit">Add comment</button>
+</div>
 </div>
 {{/each}}
 <div class='add-post-container'>

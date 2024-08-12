@@ -1,8 +1,0 @@
-{{#each}}
-<div>
-  <form class='new-comment-form' method="post" action="/api/comment"></form>
-  <textarea name="add-comment" id="add-comment" rows="2" cols="30">{{comment}}</textarea>
-  <textarea name="add-comment-user" id="add-comment-user" rows="2" cols="30">{{user}}</textarea>
-  <button type="submit">Add comment</button>
-</div>
-{{/each}}
