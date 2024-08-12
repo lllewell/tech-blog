@@ -9,13 +9,14 @@
   <div class="col-md-6">
     <h5>Made by: {{post.post_user}}</h5>
   </div>
+  <button type="button">Add comment</button>
 </div>
 {{/each}}
 <div class='add-post-container'>
     <h2>
       Add New Post
     </h2>
-    <form class='new-post-form' method="post" action="/api/dish">
+    <form class='new-post-form' method="post" action="/api/post">
       <label for='post_title'>
         Title:
       </label>
