@@ -1,3 +1,30 @@
+:root {
+  --primary: #389393;
+  --secondary: #f5a25d;
+  --tertiary: #fa7f72;
+  --quatrinary: #6c6b67;
+  --light: #ebebeb;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1);
+  --border-radius: 0.3rem;
+}
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  min-height: 100%;
+  margin: 0px auto;
+  border: 3px solid var(--primary);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-width: medium;
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 50px;
+  background-color: #ebebeb;
+}
+
 .add-post-container {
     display: flex;
     flex-wrap: wrap;
