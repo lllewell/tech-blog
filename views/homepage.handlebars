@@ -10,10 +10,15 @@
     <h5>Made by: {{post.post_user}}</h5>
   </div>
 <div>
-  <form class='new-comment-form' method="post" action="/api/comment"></form>
-  <textarea name="add-comment" id="add-comment" rows="2" cols="30">Comment: {{comment}}</textarea>
-  <textarea name="add-comment-user" id="add-comment-user" rows="2" cols="30">Username: {{user}}</textarea>
+  {{#each post.comments}}
+    <p>{{comment}}</p>
+  {{/each}}
+  <form class='new-comment-form' method="post" action="/api/comment/{{post.id}}">
+  <label for="add-comment">Comment</label>
+  <textarea name="add-comment" id="add-comment" rows="2" cols="30">{{comment.comment}}</textarea>
+ 
   <button type="submit">Add comment</button>
+  </form>
 </div>
 </div>
 {{/each}}

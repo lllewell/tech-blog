@@ -1,13 +1,11 @@
 async function newFormHandler(event) {
     event.preventDefault();
     const comment = document.querySelector('#add-comment').value;
-    const user = document.querySelector('#add-comment-user').value;
 
     const response = await fetch(`/api/comment`, {
       method: 'POST',
       body: JSON.stringify({
-        comment,
-        user,     
+        comment,    
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -15,7 +13,7 @@ async function newFormHandler(event) {
     });
     //if the dish is added, the 'all' template will be rerendered
     if (response.ok) {
-      document.location.replace('/');
+      document.location.reload();
     } else {
       alert('Failed to add comment');
     }
